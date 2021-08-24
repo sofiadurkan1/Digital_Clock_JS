@@ -8,23 +8,27 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #10101E;
+    /* background: #10101E; */
+    background-image: url(./img/annie-spratt-wuc-KEIBrdE-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
 }
 
 .datetime{
     color: #fff;
-    background: #10101E;
+    background: #1f1f38;
     font-family: "Segeo UI",sans-serif;
     width: 340px;
     padding:15px 10px;
-    border: 3px solid #2e94e3;
+    border: 3px solid #ec5b42;
     border-radius:5px;
     -webkit-box-reflect:below 1px linear gradient(transparent,rgba(255,255,255,0.1)) ;
     transition:0.5;
     transition-property:all, box-shadow;
 }
 .datetime:hover{
-    background: #2e94e3;
+    background: #ec5b42;
     box-shadow: 0 0 30px #2E94E3;
 
 
@@ -54,7 +58,7 @@ body{
 }
 
 .time span:last-child{
-    background:#2E94E3;
+    background:#ec5b42;
     font-size: 30px;
     font-weight: 600;
     text-transform:uppercase;

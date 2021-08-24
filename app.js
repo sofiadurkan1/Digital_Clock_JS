@@ -4,23 +4,32 @@ function updateClock(){
     month = now.getMonth(),
     daynum = now.getDate(),
     year = now.getFullYear(),
-    hour = now.getHours(),
+    hourOrg = now.getHours(),
     minute = now.getMinutes(),
     second = now.getSeconds(),
     period = "AM";
 
-    if(hour == 0){
+    if(hourOrg == 0){
         hour =12;
-    }
-    if(hour > 12){
+        period = "AM";
+    } else if(hourOrg > 12){
         hour = hour-12;
+    } else {
+        hour = hourOrg;
+    }
+
+    if(hourOrg >11){
         period = "PM";
 
     }
-    Number.prototype.pad = function(digits){
-        for (let n = this.toString(); n.length<digits; n = 0 + n)
-            return n;
+    if(minute <10 ){
+        minute = "0" + minute;
     }
+
+    if(second <10 ){
+        second = "0" + second;
+    }
+    
 
 
     const months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
